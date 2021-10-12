@@ -1,0 +1,16 @@
+use fadelang::types::Number;
+use fadelang::error::error;
+
+min(x: [T]): public const static -> T => {
+  if x.len() {
+    0 => error("");
+    1 => x[0];
+    else => {
+      a: T := x[0];
+      for b in x {
+        if b < a { a := b; };
+      };
+      return a;
+    };
+  };
+};

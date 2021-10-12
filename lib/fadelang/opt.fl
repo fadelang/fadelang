@@ -1,0 +1,6 @@
+Optional: <Type: ?> enum := {
+  NONE,
+  SOME {
+    val: Type;
+  };
+};

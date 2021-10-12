@@ -1,0 +1,4 @@
+To: <In: ?, Out: ?> trait := {
+  to(in: In): -> Out;
+};
+

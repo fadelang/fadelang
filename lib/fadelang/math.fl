@@ -1,0 +1,25 @@
+use fadelang::types::Number;
+
+/**
+ * Mathematical constant `e`.
+ */
+e: public const f64 := 2.7182818284590452354;
+
+/**
+ * Mathematical constant `π`.
+ */ 
+pi: const f64 := 3.14159265358979323846;
+
+sin(x: T): <T: Number> -> T;
+
+cos(x: T): <T: Number> -> T;
+
+tan(x: T): <T: Number> -> T;
+
+cot(x: T): <T: Number> -> T;
+
+min(x: T, y: T): <T: Number> -> T;
+
+max(x: T, y: T): <T: Number> -> T;
+
+clamp(min: T, max: T, x: T): <T: Number> -> T;

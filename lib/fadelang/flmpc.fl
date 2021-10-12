@@ -1,0 +1,14 @@
+/**
+ * # mpc (Machine Pseudocode)
+
+ * Instructs the compiler to put some [flmpc](#) code into place.
+ * 
+ * If `volatile` is `false`, the code will not be optimized,
+ * nor changed by the transpiler. It will be placed "as-is".
+ *
+ * @param code: The `mpc` code to put into place.
+ * @param volatile: Allow the code to be optimized
+ * @todo: improve documentation
+ * @since: 0.0.1-a1
+ */
+mpc(code: String, volatile: bool = true): extern const -> void;
