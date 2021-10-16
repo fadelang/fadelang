@@ -1,0 +1,3 @@
+To: <Out: ?> trait {
+  to(): -> Out;
+};

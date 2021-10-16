@@ -1,4 +1,4 @@
-Optional: <Type: ?> enum := {
+Optional: <Type: ?> enum {
   NONE,
   SOME {
     val: Type;

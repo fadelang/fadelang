@@ -3,12 +3,12 @@ use fadelang::types::Number;
 /**
  * Mathematical constant `e`.
  */
-e: public const f64 := 2.7182818284590452354;
+e: f64 := 2.7182818284590452354;
 
 /**
  * Mathematical constant `π`.
- */ 
-pi: const f64 := 3.14159265358979323846;
+ */
+pi: f64 := 3.14159265358979323846;
 
 sin(x: T): <T: Number> -> T;
 
