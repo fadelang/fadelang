@@ -1,0 +1,5 @@
+use fadelang::io::stdout;
+
+main(): -> 0 {
+  stdout()->println("Hello, World!");
+};

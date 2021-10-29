@@ -1,0 +1,4 @@
+OutStream: trait;
+
+
+stdout(): -> {}
