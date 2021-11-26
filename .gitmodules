@@ -1,6 +1,0 @@
-[submodule "flc"]
-	path = flc
-	url = https://github.com/fadelang/flc.git
-[submodule "fll"]
-	path = fll
-	url = https://github.com/fadelang/fll.git

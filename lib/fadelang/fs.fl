@@ -1,0 +1,6 @@
+File: trait {
+
+  delete(): virtual -> bool;
+
+  exists(): virtual -> bool;
+};

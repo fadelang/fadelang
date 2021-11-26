@@ -1,2 +1,2 @@
 [workspace]
-members = ["flc", "fll"]
+members = ["flc", "fll", "flsh", "flvm"]

@@ -1,1 +1,3 @@
 error(msg: str = ""): -> !;
+
+todo(msg: str = ""): -> !;
