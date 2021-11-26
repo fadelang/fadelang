@@ -1,0 +1,72 @@
+MainReturnable: trait {
+  return_code(): virtual -> usize;
+};
+
+Optional: <Type: ?> enum + MainReturnable {
+  NONE,
+  SOME { val: Type, };
+
+  return_code(): override -> usize = match self {
+    SOME: yield 0,
+    NONE: yield 1,
+  };
+};
+
+Result: <Type: ?, Error: ? + fadelang::error::Error> enum + MainReturnable {
+  SUCCESS { val: Type, },
+  ERROR { err: Error, };
+
+  return_code(): override -> usize = match self {
+    SUCCESS: yield 0,
+    ERROR: yield 1,
+  };
+};
+
+To: <Out: ?> trait {
+  to(): -> Out;
+};
+
+Equal: <Other: ?> trait {
+  equal(other: Other): virtual -> bool;
+
+  not_equal(other: Other): virtual -> bool = !self->equal(other);
+};
+
+CompResult: enum {
+  SMALLER = -1,
+  EQUAL = 0,
+  LARGER = 1;
+};
+
+Comp: <Other: ?> trait {
+  /**
+   * ```
+   * if self < other: SMALLER
+   * if self = other: EQUAL
+   * if self > other: LARGER
+   * ```
+   */
+  comp(other: Other): virtual -> CompResult;
+};
+
+min(x: [T]): <T: ?> -> T {
+  return match x.len() {
+    0: error("");
+    1: x[0];
+    else {
+      a: yield T = x[0];
+      for b in x: if b < a: a = b;
+    };
+  };
+};
+
+max(x: [T]): <T: ?> -> T {
+  return match x.len() {
+    0: error("");
+    1: x[0];
+    else {
+      a: yield T = x[0];
+      for b in x: if b > a: a = b;
+    };
+  };
+};

@@ -1,4 +1,31 @@
-use fadelang::types::Number;
+use ::nums::Number;
+
+nums: mod {
+  /**
+   * A union type, that includes all signed integer types.
+   */
+  SignedInteger: type = i8 | i16 | i32 | i64 | i128;
+
+  /**
+   * A union type, that includes all unsigned integer types.
+   */
+  UnsignedInteger: type = u8 | u16 | u32 | u64 | u128;
+
+  /**
+   * A union type, that includes all integer types.
+   */
+  Integer: type = UnsignedInteger | SignedInteger;
+
+  /**
+   * A type, that includes all decimal types.
+   */
+  Decimal: type = f32 | f64;
+
+  /**
+   * A type, that includes all numerical types.
+   */
+  Number: type = Integer | Decimal;
+};
 
 /**
  * Mathematical constant `e`.
@@ -10,16 +37,16 @@ e: f64 := 2.7182818284590452354;
  */
 pi: f64 := 3.14159265358979323846;
 
-sin(x: T): <T: Number> -> T;
+sin(x: Number): -> Decimal;
 
-cos(x: T): <T: Number> -> T;
+cos(x: Number): -> Decimal;
 
-tan(x: T): <T: Number> -> T;
+tan(x: Number): -> Decimal;
 
-cot(x: T): <T: Number> -> T;
+cot(x: Number): -> Decimal;
 
-min(x: T, y: T): <T: Number> -> T;
+min(x: Number, y: Number): -> Number;
 
-max(x: T, y: T): <T: Number> -> T;
+max(x: Number, y: Number): -> Number;
 
-clamp(min: T, max: T, x: T): <T: Number> -> T;
+clamp(min: Number, max: Number, x: Number): -> Number;

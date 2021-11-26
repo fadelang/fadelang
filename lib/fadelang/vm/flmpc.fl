@@ -9,6 +9,6 @@
  * @param code: The `mpc` code to put into place.
  * @param volatile: Allow the code to be optimized
  * @todo: improve documentation
- * @since: 0.0.1-a1
+ * @since: 0.0.1
  */
 mpc(code: str, volatile: bool = true): -> void;

@@ -1,4 +1,16 @@
-OutStream: trait;
+OutStream: trait {
+  println(printable: Printable = "");
+};
+
+InStream: trait;
+
+stdout(): -> OutStream {}
+
+stderr(): -> OutStream {}
+
+stdin(): -> InStream {}
 
 
-stdout(): -> {}
+println(stream: OutStream = stdout(), printable: Printable = "") {
+  stream->println(string);
+}
